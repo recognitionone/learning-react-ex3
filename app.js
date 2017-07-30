@@ -74,51 +74,33 @@
 // --------------------------------------------
 
 
-// function ShoppingTitle(props) {
-// 	return(<div>
-// 		<h1>{props.title}</h1>
-// 		<h2>Total number of items: {props.numItems}</h2>
-// 	</div>);
-// }
+function ShoppingTitle(props) {
+	return(<div>
+		<h1>{props.title}</h1>
+		<h2>Total number of items: {props.numItems}</h2>
+	</div>);
+}
 
-// function ListItem(props) {
-// 	return(<li>{props.item}</li>);
-// }
+function ListItem(props) {
+	return(<li>{props.item}</li>);
+}
 
-// function ShoppingList(props) {
-// 	return(
-// 			<div>
-// 				<h3>{props.header}</h3>
-// 				<ol>
-// 					<ListItem item = {props.items[0]} />
-// 					<ListItem item = {props.items[1]} />
-// 					<ListItem item = {props.items[2]} />					
-// 				</ol>
-// 			</div>
-// 		);
-// }
-
-// // function ShoppingApp(props) {
-// // 	if (props.active) {
-// // 		return (
-// // 				<div>
-// // 					<h1>This is active</h1>
-// // 					<ShoppingTitle title = "My shopping list" numItems = "9" />
-// // 					<ShoppingList header = "Food" items = {["oranges", "apples", "juice"]} />
-// // 					<ShoppingList header = "Clothes" items = {["denim", "pants", "shirt"]} />				
-// // 					<ShoppingList header = "Stuff" items = {["pen", "glue", "paper"]} />
-// // 				</div>
-// // 			);
-// // 	} else {
-// // 		return (<h1>This is not active</h1>
-// // 			);
-// // 	}
-// // }
-
+function ShoppingList(props) {
+	return(
+			<div>
+				<h3>{props.header}</h3>
+				<ol>
+					<ListItem item = {props.items[0]} />
+					<ListItem item = {props.items[1]} />
+					<ListItem item = {props.items[2]} />					
+				</ol>
+			</div>
+		);
+}
 
 // function ShoppingApp(props) {
-// 	return (
-// 			props.active &&
+// 	if (props.active) {
+// 		return (
 // 				<div>
 // 					<h1>This is active</h1>
 // 					<ShoppingTitle title = "My shopping list" numItems = "9" />
@@ -126,27 +108,45 @@
 // 					<ShoppingList header = "Clothes" items = {["denim", "pants", "shirt"]} />				
 // 					<ShoppingList header = "Stuff" items = {["pen", "glue", "paper"]} />
 // 				</div>
-// 		);
-
-// 	// if (props.active) {
-// 	// 	return (
-// 	// 			<div>
-// 	// 				<h1>This is active</h1>
-// 	// 				<ShoppingTitle title = "My shopping list" numItems = "9" />
-// 	// 				<ShoppingList header = "Food" items = {["oranges", "apples", "juice"]} />
-// 	// 				<ShoppingList header = "Clothes" items = {["denim", "pants", "shirt"]} />				
-// 	// 				<ShoppingList header = "Stuff" items = {["pen", "glue", "paper"]} />
-// 	// 			</div>
-// 	// 		);
-// 	// } else {
-// 	// 	return (<h1>This is not active</h1>
-// 	// 		);
-// 	// }
+// 			);
+// 	} else {
+// 		return (<h1>This is not active</h1>
+// 			);
+// 	}
 // }
 
-// ReactDOM.render(
-// 	<ShoppingApp active = {false} />,
-// 	document.getElementById("rootOfAllEvil"));
+
+function ShoppingApp(props) {
+	return (
+			props.active &&
+				<div>
+					<h1>This is active</h1>
+					<ShoppingTitle title = "My shopping list" numItems = "9" />
+					<ShoppingList header = "Food" items = {["oranges", "apples", "juice"]} />
+					<ShoppingList header = "Clothes" items = {["denim", "pants", "shirt"]} />				
+					<ShoppingList header = "Stuff" items = {["pen", "glue", "paper"]} />
+				</div>
+		);
+
+	// if (props.active) {
+	// 	return (
+	// 			<div>
+	// 				<h1>This is active</h1>
+	// 				<ShoppingTitle title = "My shopping list" numItems = "9" />
+	// 				<ShoppingList header = "Food" items = {["oranges", "apples", "juice"]} />
+	// 				<ShoppingList header = "Clothes" items = {["denim", "pants", "shirt"]} />				
+	// 				<ShoppingList header = "Stuff" items = {["pen", "glue", "paper"]} />
+	// 			</div>
+	// 		);
+	// } else {
+	// 	return (<h1>This is not active</h1>
+	// 		);
+	// }
+}
+
+ReactDOM.render(
+	<ShoppingApp active = {true} />,
+	document.getElementById("rootOfAllEvil"));
 
 // --------------------------------------------
 
